@@ -1,0 +1,12 @@
+# Simple Docker Compose file for PostgreSQL database (no volume/persistence)
+
+services:
+  db:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: axinar
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
