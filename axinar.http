@@ -1,0 +1,6 @@
+@axinar_HostAddress = http://localhost:5177
+
+GET {{axinar_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
