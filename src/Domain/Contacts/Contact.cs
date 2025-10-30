@@ -13,5 +13,5 @@ public class Contact
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     // Tasks List
-    public ICollection<Task> Tasks { get; set; } = new List<Task>();
+    public ICollection<Task>? Tasks { get; set; } = new List<Task>();
 }

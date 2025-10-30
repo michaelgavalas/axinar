@@ -1,4 +1,4 @@
-namespace Axinar.Domain.Contacts.Dtos;
+namespace Axinar.Application.Contacts;
 
 public record DeleteContactRequest(
     Guid Id

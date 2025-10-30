@@ -1,4 +1,6 @@
-namespace Axinar.Domain.Contacts.Dtos;
+namespace Axinar.Application.Contacts;
+
+using Axinar.Application.Tasks;
 
 public record ContactDto(
     Guid Id,
@@ -7,8 +9,6 @@ public record ContactDto(
     string Email,
     string PhoneNumber,
     DateTime CreatedAt,
-    DateTime UpdatedAt
+    DateTime UpdatedAt,
+    IEnumerable<TaskDto>? Tasks
 );
-
-// TODO: Add when TaskDto is implemented
-// IEnumerable<TaskDto>? Tasks

@@ -11,7 +11,7 @@ public class TaskItem
     public bool IsCompleted { get; set; } = false;
 
     // Contact Foreign key
-    public Guid ContactId { get; set; }
+    public Guid? ContactId { get; set; }
     public Contact? Contact { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
