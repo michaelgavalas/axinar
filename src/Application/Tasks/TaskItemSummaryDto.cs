@@ -1,6 +1,6 @@
 namespace Axinar.Application.Tasks.Dtos;
 
-public record TaskSummaryDto(
+public record TaskItemSummaryDto(
     Guid Id,
     string Title,
     bool IsCompleted,

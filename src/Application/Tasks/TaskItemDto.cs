@@ -2,7 +2,7 @@ namespace Axinar.Application.Tasks;
 
 using Axinar.Application.Contacts;
 
-public record TaskDto(
+public record TaskItemDto(
     Guid Id,
     string Title,
     string? Description,
