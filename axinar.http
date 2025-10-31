@@ -6,6 +6,11 @@ Accept: application/json
 
 ###
 
+GET {{axinar_HostAddress}}/api/v1/contacts/{{id}}
+Accept: application/json
+
+###
+
 POST {{axinar_HostAddress}}/api/v1/contacts
 Content-Type: application/json
 
