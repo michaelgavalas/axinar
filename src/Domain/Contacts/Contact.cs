@@ -12,6 +12,6 @@ public class Contact
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    // Tasks List
-    public ICollection<Task>? Tasks { get; set; } = new List<Task>();
+    // Prefer TaskItem to avoid conflict with System.Threading.Tasks.Task
+    public ICollection<TaskItem> Tasks { get; set; } = new List<TaskItem>();
 }

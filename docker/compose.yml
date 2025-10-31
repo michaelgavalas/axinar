@@ -10,3 +10,18 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
+
+  dbgate:
+    image: dbgate/dbgate:latest
+    ports:
+      - "8083:3000"
+    depends_on:
+      - db
+    environment:
+      - CONNECTIONS__pg__engine=postgres@dbgate
+      - CONNECTIONS__pg__host=db
+      - CONNECTIONS__pg__port=5432
+      - CONNECTIONS__pg__user=postgres
+      - CONNECTIONS__pg__password=postgres
+      - CONNECTIONS__pg__database=axinar
+
