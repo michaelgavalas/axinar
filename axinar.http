@@ -1,6 +1,35 @@
 @axinar_HostAddress = http://localhost:5177
+@id = 9c207aef-48b3-4d7e-a4aa-bb72c72f9bfb
 
-GET {{axinar_HostAddress}}/weatherforecast/
+GET {{axinar_HostAddress}}/api/v1/contacts
 Accept: application/json
 
 ###
+
+POST {{axinar_HostAddress}}/api/v1/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Michael",
+  "lastName": "Gavalas",
+  "email": "mgavalas23@gmail.com",
+  "phoneNumber": "+30 698 689 3242"
+}
+
+###
+
+PUT {{axinar_HostAddress}}/api/v1/contacts/{{id}}
+Content-Type: application/json
+
+{
+  "firstName": "Michael",
+  "lastName": "Gavalas",
+  "email": "michael.gavalas@outlook.com",
+  "phoneNumber": "+30 698 689 3242"
+}
+
+###
+
+DELETE {{axinar_HostAddress}}/api/v1/contacts/{{id}}
+Accept: application/json
+

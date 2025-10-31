@@ -67,8 +67,6 @@ public class ContactsController : ControllerBase
     [HttpPut("{id:guid}")]
     public async Task<ActionResult<ContactDto>> Update(Guid id, UpdateContactRequest dto)
     {
-        if (id != dto.Id) return BadRequest();
-
         var entity = await _db.Contacts.Include(c => c.Tasks).FirstOrDefaultAsync(c => c.Id == id);
         if (entity is null) return NotFound();
 
